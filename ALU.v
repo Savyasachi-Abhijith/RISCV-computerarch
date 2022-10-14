@@ -10,12 +10,12 @@ output reg [31:0] write_data
  always@(ctrl or data1 or  data2)
  begin 
     case(ctrl)
-           1 :assign write_data=data1+data2;
-           2 :assign write_data=data1-data2;
-           3 :assign write_data=data1 & data2;
-           4 :assign write_data=data1 | data2;
-           5 :assign write_data=data1>>data2;
-           6 :assign write_data=data2<<data1;
+           1 : write_data=data1+data2;
+           2 : write_data=data1-data2;
+           3 : write_data=data1 & data2;
+           4 : write_data=data1 | data2;
+           5 : write_data=data1>>data2;
+           6 : write_data=data2<<data1;
     endcase
 end
 endmodule
